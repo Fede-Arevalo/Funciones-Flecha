@@ -195,15 +195,11 @@ const foodList = [
   },
 ];
 
-const fraseCliente = [];
+const platosVeganos = foodList
+  .filter((plato) => plato.isVeggie == true)
+  .map((platoFiltrado) => `Que rico ${platoFiltrado.name} me voy a comer!`);
 
-const platosVeganos = foodList.filter((plato) => {
-  if (plato.isVeggie == true) {
-    fraseCliente.push((plato = `Que rico ${plato.name} me voy a comer!`));
-  }
-});
-
-console.log(fraseCliente);
+console.log(platosVeganos);
 
 // ----------------------------------
 
