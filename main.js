@@ -195,18 +195,22 @@ const foodList = [
   },
 ];
 
+const fraseCliente = [];
+
 const platosVeganos = foodList.filter((plato) => {
   if (plato.isVeggie == true) {
-    return console.log(`Que rico ${plato.name} me voy a comer!`);
+    fraseCliente.push((plato = `Que rico ${plato.name} me voy a comer!`));
   }
 });
+
+console.log(fraseCliente);
 
 // ----------------------------------
 
 // Reduce //
 
 // . Dado el siguiente array, obtén la multiplicación de todos
-// los elementos del array: 
+// los elementos del array:
 // Salida--> 483600
 
 const arrNum = [39, 2, 4, 25, 62];
@@ -214,3 +218,40 @@ const arrNum = [39, 2, 4, 25, 62];
 const multi = arrNum.reduce((a, b) => a * b);
 
 console.log(multi);
+
+// --------------- EXTRAS --------------- //
+
+// Map //
+
+// . Dado el siguiente array, crear un segundo array que
+// forme frases como en el ejemplo accediendo a las propiedades
+// del objeto proporcionado:
+
+const staff = [
+  {
+    name: "Pepe",
+    role: "The Boss",
+    hobbies: ["leer", "ver pelis"],
+  },
+  {
+    name: "Ana",
+    role: "becaria",
+    hobbies: ["nadar", "bailar"],
+  },
+  {
+    name: "Luis",
+    role: "programador",
+    hobbies: ["dormir", "comprar"],
+  },
+  {
+    name: "Carlos",
+    role: "secretario",
+    hobbies: ["futbol", "queso"],
+  },
+];
+
+const frases = staff.map((frase) => {
+  return (frase = `${frase.name} es ${frase.role} y le gusta ${frase.hobbies[0]} y ${frase.hobbies[1]} `);
+});
+
+console.log(frases);
