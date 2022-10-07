@@ -247,7 +247,7 @@ const staff = [
 ];
 
 const frases = staff.map((frase) => {
-  return (frase = `${frase.name} es ${frase.role} y le gusta ${frase.hobbies[0]} y ${frase.hobbies[1]} `);
+  return `${frase.name} es ${frase.role} y le gusta ${frase.hobbies[0]} y ${frase.hobbies[1]} `;
 });
 
 console.log(frases);
